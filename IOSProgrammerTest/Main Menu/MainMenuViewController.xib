@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato Light.ttf">
+            <string>Machinato-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainMenuViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="c3l-9u-x9I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeMenu" translatesAutoresizingMaskIntoConstraints="NO" id="6po-4j-OXB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-2I-g1i">
+                    <rect key="frame" x="40" y="257" width="241" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="241" id="We0-J0-o6k"/>
+                    </constraints>
+                    <state key="normal" image="btn_main_login">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="apiSectionAction:" destination="-1" eventType="touchUpInside" id="E1z-6c-yAP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIv-WM-yxj">
+                    <rect key="frame" x="40" y="201" width="241" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="241" id="Ofu-TA-jBk"/>
+                    </constraints>
+                    <state key="normal" image="btn_main_chat">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tableSectionAction:" destination="-1" eventType="touchUpInside" id="3Sa-RA-4sY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8J-gC-vJF">
+                    <rect key="frame" x="38" y="307" width="244" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="244" id="PY4-3j-tMB"/>
+                        <constraint firstAttribute="width" constant="244" id="k8t-yo-7ko"/>
+                        <constraint firstAttribute="width" constant="241" id="uTl-f1-cPf"/>
+                        <constraint firstAttribute="width" constant="244" id="yOk-vG-Rcg"/>
+                    </constraints>
+                    <state key="normal" image="btn_main_animation">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PY4-3j-tMB"/>
+                            <exclude reference="uTl-f1-cPf"/>
+                            <exclude reference="yOk-vG-Rcg"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="animationSectionAction:" destination="-1" eventType="touchUpInside" id="x0r-AK-Kgg"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coding Tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coo-fR-yu3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.20784313730000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="2qa-c2-OYn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="u8J-gC-vJF" secondAttribute="bottom" constant="201" id="0NA-7P-ujh"/>
+                <constraint firstAttribute="trailing" secondItem="u8J-gC-vJF" secondAttribute="trailing" constant="39" id="3zE-Ze-Mmp"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="top" secondItem="hIv-WM-yxj" secondAttribute="bottom" constant="3" id="4WR-bI-RLk"/>
+                <constraint firstItem="coo-fR-yu3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Zr-pV-fnF"/>
+                <constraint firstAttribute="trailing" secondItem="6po-4j-OXB" secondAttribute="trailing" id="Biz-fe-TUz"/>
+                <constraint firstItem="coo-fR-yu3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DRF-qZ-ZQp"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="6po-4j-OXB" secondAttribute="bottom" constant="-255" id="HBx-rX-Ixa"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="1" id="HV7-HS-wva"/>
+                <constraint firstAttribute="trailing" secondItem="coo-fR-yu3" secondAttribute="trailing" id="JIW-ID-Y4u"/>
+                <constraint firstItem="6po-4j-OXB" firstAttribute="leading" secondItem="u8J-gC-vJF" secondAttribute="trailing" constant="-281" id="Mwg-CK-L3k"/>
+                <constraint firstItem="6po-4j-OXB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="N3v-56-clN"/>
+                <constraint firstAttribute="trailing" secondItem="coo-fR-yu3" secondAttribute="trailing" id="Nbl-pv-R05"/>
+                <constraint firstAttribute="bottom" secondItem="6po-4j-OXB" secondAttribute="bottom" id="SL8-6Q-9Ud"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Y3s-Vn-CSx"/>
+                <constraint firstItem="6po-4j-OXB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bkh-Yt-o8O"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="3" id="caq-pl-XWA"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerX" secondItem="6po-4j-OXB" secondAttribute="centerX" id="dqB-wr-lSA"/>
+                <constraint firstAttribute="trailing" secondItem="hIv-WM-yxj" secondAttribute="trailing" constant="39" id="e3y-Jd-hOG"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="3" id="fZE-mg-hm0"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="centerY" secondItem="6po-4j-OXB" secondAttribute="centerY" id="gdl-aL-JIM"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="top" secondItem="coo-fR-yu3" secondAttribute="bottom" constant="161" id="hFV-SQ-3NG"/>
+                <constraint firstItem="coo-fR-yu3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iuI-lu-I93"/>
+                <constraint firstAttribute="bottom" secondItem="6po-4j-OXB" secondAttribute="bottom" id="jDZ-10-TNm"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="top" secondItem="coo-fR-yu3" secondAttribute="bottom" constant="133" id="k0F-2P-bO2"/>
+                <constraint firstItem="6po-4j-OXB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kNa-tO-Epv"/>
+                <constraint firstItem="6po-4j-OXB" firstAttribute="leading" secondItem="u8J-gC-vJF" secondAttribute="trailing" constant="-281" id="kVN-lS-yZv"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="37" id="mIh-hP-H4B"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="201" id="ojD-qX-fvR"/>
+                <constraint firstItem="coo-fR-yu3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qHv-vf-WPc"/>
+                <constraint firstItem="6po-4j-OXB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yCI-HB-Wk0"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerY" secondItem="6po-4j-OXB" secondAttribute="centerY" id="ych-6B-4i7"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Mwg-CK-L3k"/>
+                    <exclude reference="jDZ-10-TNm"/>
+                    <exclude reference="kVN-lS-yZv"/>
+                    <exclude reference="Nbl-pv-R05"/>
+                    <exclude reference="iuI-lu-I93"/>
+                    <exclude reference="qHv-vf-WPc"/>
+                    <exclude reference="hFV-SQ-3NG"/>
+                    <exclude reference="k0F-2P-bO2"/>
+                    <exclude reference="ojD-qX-fvR"/>
+                    <exclude reference="0NA-7P-ujh"/>
+                    <exclude reference="HBx-rX-Ixa"/>
+                    <exclude reference="HV7-HS-wva"/>
+                    <exclude reference="fZE-mg-hm0"/>
+                    <exclude reference="gdl-aL-JIM"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="132" y="207"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="HomeMenu" width="320" height="568"/>
+        <image name="btn_main_animation" width="244" height="67"/>
+        <image name="btn_main_chat" width="241" height="53"/>
+        <image name="btn_main_login" width="241" height="53"/>
+    </resources>
+</document>

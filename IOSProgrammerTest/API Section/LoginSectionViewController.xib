@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato Light.ttf">
+            <string>Machinato-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginSectionViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-zC-6Xi">
+                    <rect key="frame" x="8" y="14" width="73" height="49"/>
+                    <state key="normal" title="Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="J25-hm-NYq"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="Zbf-9F-fyD">
+                    <rect key="frame" x="0.0" y="-3" width="320" height="571"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yr3-TA-kxC">
+                    <rect key="frame" x="0.0" y="156" width="320" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="D9s-hq-9bu"/>
+                        <constraint firstAttribute="width" constant="320" id="e6q-Gs-qcr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-em-mYV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                    <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-zL-kf4">
+                    <rect key="frame" x="0.0" y="87" width="320" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WBd-uj-hwR"/>
+                        <constraint firstAttribute="width" constant="320" id="vWc-2K-R0H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Zbf-9F-fyD" secondAttribute="bottom" id="11x-AQ-jkQ"/>
+                <constraint firstAttribute="trailing" secondItem="z5f-zL-kf4" secondAttribute="trailing" id="3OX-W2-nmj"/>
+                <constraint firstAttribute="trailing" secondItem="z5f-zL-kf4" secondAttribute="trailing" id="9Gm-Ml-thm"/>
+                <constraint firstItem="z5f-zL-kf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EF6-4c-Cic"/>
+                <constraint firstItem="z5f-zL-kf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ga4-h9-McJ"/>
+                <constraint firstAttribute="bottom" secondItem="yr3-TA-kxC" secondAttribute="bottom" constant="447" id="Hjm-uZ-Wzo"/>
+                <constraint firstAttribute="trailing" secondItem="z5f-zL-kf4" secondAttribute="trailing" id="I6W-4b-9KW"/>
+                <constraint firstItem="z5f-zL-kf4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="Iy6-8W-0qh"/>
+                <constraint firstItem="yr3-TA-kxC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="N5E-QZ-fuv"/>
+                <constraint firstItem="Zbf-9F-fyD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NwQ-wA-Xwj"/>
+                <constraint firstAttribute="trailing" secondItem="yr3-TA-kxC" secondAttribute="trailing" id="PzA-Cl-7Zk"/>
+                <constraint firstItem="yr3-TA-kxC" firstAttribute="top" secondItem="z5f-zL-kf4" secondAttribute="bottom" constant="13" id="Qwg-9Q-Tvv"/>
+                <constraint firstAttribute="trailing" secondItem="yr3-TA-kxC" secondAttribute="trailing" id="VF2-eT-AOW"/>
+                <constraint firstItem="Zbf-9F-fyD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WY8-yZ-0ft"/>
+                <constraint firstItem="yr3-TA-kxC" firstAttribute="top" secondItem="z5f-zL-kf4" secondAttribute="bottom" constant="13" id="X3C-Le-cnn"/>
+                <constraint firstAttribute="trailing" secondItem="Zbf-9F-fyD" secondAttribute="trailing" id="bmj-21-igk"/>
+                <constraint firstItem="yr3-TA-kxC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dBh-yH-Jah"/>
+                <constraint firstAttribute="bottom" secondItem="yr3-TA-kxC" secondAttribute="bottom" constant="447" id="kDk-2C-fPp"/>
+                <constraint firstAttribute="bottom" secondItem="yr3-TA-kxC" secondAttribute="bottom" constant="447" id="kzI-os-8Pt"/>
+                <constraint firstItem="z5f-zL-kf4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="lMD-O5-DaH"/>
+                <constraint firstItem="yr3-TA-kxC" firstAttribute="top" secondItem="z5f-zL-kf4" secondAttribute="bottom" constant="13" id="nPL-e3-Xzh"/>
+                <constraint firstItem="yr3-TA-kxC" firstAttribute="top" secondItem="z5f-zL-kf4" secondAttribute="bottom" constant="13" id="rjC-2D-CWI"/>
+                <constraint firstItem="z5f-zL-kf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yZQ-C1-uIK"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="3OX-W2-nmj"/>
+                    <exclude reference="Ga4-h9-McJ"/>
+                    <exclude reference="Iy6-8W-0qh"/>
+                    <exclude reference="Hjm-uZ-Wzo"/>
+                    <exclude reference="PzA-Cl-7Zk"/>
+                    <exclude reference="X3C-Le-cnn"/>
+                    <exclude reference="dBh-yH-Jah"/>
+                    <exclude reference="kDk-2C-fPp"/>
+                    <exclude reference="kzI-os-8Pt"/>
+                    <exclude reference="nPL-e3-Xzh"/>
+                    <exclude reference="rjC-2D-CWI"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login" width="320" height="568"/>
+    </resources>
+</document>
