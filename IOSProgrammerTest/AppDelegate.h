@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 + (UIColor*)myColor1;
-
++ (UIColor*)myColor_ffffff;
 
 @end
 

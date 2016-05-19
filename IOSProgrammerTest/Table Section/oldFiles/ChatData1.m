@@ -2,10 +2,9 @@
 //  ChatData.m
 //  IOSProgrammerTest
 //
-//  Created by Kritsakorn on 7/24/15.
-//  Copyright (c) 2015 Kritsakorn. All rights reserved.
+//  Created by Justin LeClair on 12/19/14.
+//  Copyright (c) 2014 AppPartner. All rights reserved.
 //
-
 
 #import "ChatData.h"
 
@@ -15,7 +14,7 @@
     self.user_id = [[dict objectForKey:@"user_id"] intValue];
     self.username = [dict objectForKey:@"username"];
     self.avatar_url = [dict objectForKey:@"avatar_url"];
+    self.avatar_image = [dict objectForKey:@""];
     self.message = [dict objectForKey:@"message"];
-    self.avatar_image= [dict objectForKey:@""];
 }
 @end

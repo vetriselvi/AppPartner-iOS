@@ -10,6 +10,7 @@
 #import "ChatSectionViewController.h"
 #import "LoginSectionViewController.h"
 #import "AnimationSectionViewController.h"
+#import "UIColor+HexString.h"
 
 
 @interface MainMenuViewController ()
@@ -22,9 +23,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-     self.navigationController.navigationBar.topItem.title = @"";
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.title=@"Coding Tasks";
+    self.navigationController.navigationBar.backItem.title=@"";
+//    self.navigationController.navigationBar.topItem.title=@"";
+   
+    
 
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.navigationItem.title=@"Coding Tasks";
 }
 
 - (void)didReceiveMemoryWarning

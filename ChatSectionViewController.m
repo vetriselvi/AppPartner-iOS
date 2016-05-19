@@ -2,19 +2,19 @@
 //  TableSectionViewController.m
 //  IOSProgrammerTest
 //
-//  Created by Kritsakorn on 7/24/15.
-//  Copyright (c) 2015 Kritsakorn. All rights reserved.
+//  Created by Justin LeClair on 12/15/14.
+//  Copyright (c) 2014 AppPartner. All rights reserved.
 //
 
 
 #import "ChatSectionViewController.h"
 #import "MainMenuViewController.h"
 #import "ChatCell.h"
+#import "AppDelegate.h"
 
-#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
+#define jsonQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 
 #define TABLE_CELL_HEIGHT 90.0f
-#define OffsetConstraintForTextView 94.0f
 
 @interface ChatSectionViewController ()
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -26,16 +26,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"CHAT";
+    self.navigationItem.title = @"Chat";
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
+    self.navigationController.navigationBar.topItem.title=@"";
+
+ 
 }
 
 - (void)loadJSONData
 {
-    //load JSON on global_queue thread
-    dispatch_async(kBgQueue, ^{
+    dispatch_async(jsonQueue, ^{
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"chatData" ofType:@"json"];
         NSError *error = nil;
         NSData *rawData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
@@ -74,7 +76,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"ChatCell";
-    ChatCell *cell = nil;
+    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier ];//forIndexPath:indexPath
 
     if (cell == nil)
     {
@@ -103,11 +105,12 @@
     paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     
     //Make roundrect around the image icon
-    CGRect textRect = [textMessage boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width-OffsetConstraintForTextView, 1000.0f)
+    CGRect textMsgRect = [textMessage boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width-94.0f, 1000.0f)
                                          options:NSStringDrawingUsesLineFragmentOrigin
                                       attributes:@{NSParagraphStyleAttributeName: paragraphStyle.copy}
                                          context:nil];
     
-    return TABLE_CELL_HEIGHT+textRect.size.height;
+    return TABLE_CELL_HEIGHT+textMsgRect.size.height;
+    return TABLE_CELL_HEIGHT;
 }
 @end

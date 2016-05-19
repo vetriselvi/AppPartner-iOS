@@ -2,19 +2,18 @@
 //  TableSectionViewController.m
 //  IOSProgrammerTest
 //
-//  Created by Kritsakorn on 7/24/15.
-//  Copyright (c) 2015 Kritsakorn. All rights reserved.
+//  Created by Justin LeClair on 12/15/14.
+//  Copyright (c) 2014 AppPartner. All rights reserved.
 //
-
 
 #import "ChatSectionViewController.h"
 #import "MainMenuViewController.h"
 #import "ChatCell.h"
 
-#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
+#define jsonParsingQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
 
-#define TABLE_CELL_HEIGHT 90.0f
-#define OffsetConstraintForTextView 94.0f
+#define TABLE_CELL_HEIGHT 95.0f
+
 
 @interface ChatSectionViewController ()
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
@@ -26,26 +25,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"CHAT";
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationController.navigationBar.topItem.title = @"";
+    self.navigationItem.title = @"Chat";
+     self.automaticallyAdjustsScrollViewInsets = NO;
     self.loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
 }
 
+
+
 - (void)loadJSONData
 {
-    //load JSON on global_queue thread
-    dispatch_async(kBgQueue, ^{
+
+    
+    // execute a task on that queue asynchronously
+    dispatch_async(jsonParsingQueue, ^{
+        
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"chatData" ofType:@"json"];
+        
         NSError *error = nil;
+        
         NSData *rawData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
-
+        
         id JSONData = [NSJSONSerialization JSONObjectWithData:rawData options:NSJSONReadingAllowFragments error:&error];
-
+        
         [self.loadedChatData removeAllObjects];
         if ([JSONData isKindOfClass:[NSDictionary class]])
         {
             NSDictionary *jsonDict = (NSDictionary *)JSONData;
+            
             NSArray *loadedArray = [jsonDict objectForKey:@"data"];
             if ([loadedArray isKindOfClass:[NSArray class]])
             {
@@ -57,24 +65,34 @@
                 }
             }
         };
-        
-        //update tableview on main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
         });
     });
+    
 }
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backAction:(id)sender
+{
+    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
+    [self.navigationController pushViewController:mainMenuViewController animated:YES];
+}
+
 #pragma mark - UITableViewDataSource
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"ChatCell";
-    ChatCell *cell = nil;
+    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier ];//forIndexPath:indexPath
+
+//    ChatCell *cell = nil;
 
     if (cell == nil)
     {
@@ -83,31 +101,25 @@
     }
 
     ChatData *chatData = [self.loadedChatData objectAtIndex:[indexPath row]];
+
     [cell loadWithData:chatData];
 
     return cell;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.loadedChatData.count;
 }
 
+
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ChatData *chatData = [self.loadedChatData objectAtIndex:[indexPath row]];
-    NSString *textMessage = chatData.message;
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
     
-    //Make roundrect around the image icon
-    CGRect textRect = [textMessage boundingRectWithSize:CGSizeMake(self.tableView.frame.size.width-OffsetConstraintForTextView, 1000.0f)
-                                         options:NSStringDrawingUsesLineFragmentOrigin
-                                      attributes:@{NSParagraphStyleAttributeName: paragraphStyle.copy}
-                                         context:nil];
-    
-    return TABLE_CELL_HEIGHT+textRect.size.height;
+    return TABLE_CELL_HEIGHT;
+
 }
 @end

@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udg-gG-eTY">
-                    <rect key="frame" x="0.0" y="60" width="320" height="420"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Qfb-t0-gjY"/>
@@ -30,9 +30,22 @@
                 <constraint firstItem="udg-gG-eTY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="2Yj-Ji-BLb"/>
                 <constraint firstAttribute="bottom" secondItem="udg-gG-eTY" secondAttribute="bottom" id="Wr2-vq-GvG"/>
                 <constraint firstAttribute="trailing" secondItem="udg-gG-eTY" secondAttribute="trailing" id="Z26-LM-tkm"/>
+                <constraint firstAttribute="trailing" secondItem="udg-gG-eTY" secondAttribute="trailing" id="cUj-Wo-D3X"/>
                 <constraint firstItem="udg-gG-eTY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cvg-XM-WVn"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="orw-Pi-0hN"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qrg-o2-BDU"/>
+                <constraint firstAttribute="bottom" secondItem="udg-gG-eTY" secondAttribute="bottom" id="xtL-j6-j0G"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="2Yj-Ji-BLb"/>
+                    <exclude reference="Wr2-vq-GvG"/>
+                    <exclude reference="Z26-LM-tkm"/>
+                    <exclude reference="cvg-XM-WVn"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="119" y="114"/>
         </view>
     </objects>
 </document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableSectionTableViewCell.h
 //  IOSProgrammerTest
 //
 //  Created by Justin LeClair on 12/15/14.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainMenuViewController : UIViewController
-@property (weak, nonatomic) UILabel *codingTasksLabel;
-
+#import "ChatData.h"
+@interface ChatCell : UITableViewCell
+- (void)loadWithData:(ChatData *)chatData;
 @end
-

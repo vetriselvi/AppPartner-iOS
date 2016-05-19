@@ -2,17 +2,18 @@
 //  TableSectionTableViewCell.m
 //  IOSProgrammerTest
 //
-//  Created by Kritsakorn on 7/24/15.
-//  Copyright (c) 2015 Kritsakorn. All rights reserved.
+//  Created by Justin LeClair on 12/15/14.
+//  Copyright (c) 2014 AppPartner. All rights reserved.
 //
 
-
 #import "ChatCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ChatCell ()
 @property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, strong) IBOutlet UITextView *messageTextView;
-@property (weak, nonatomic) IBOutlet UIImageView *userIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
+
 @end
 
 @implementation ChatCell
@@ -24,10 +25,15 @@
 
 - (void)loadWithData:(ChatData *)chatData
 {
+    
     self.usernameLabel.text = chatData.username;
     [self.usernameLabel sizeToFit];
     self.messageTextView.text = chatData.message;
     [self.messageTextView sizeToFit];
+    
+//     self.userImage.layer.cornerRadius =  self.userImage.frame.size.height /2;
+//     self.userImage.layer.masksToBounds = YES;
+//     self.userImage.layer.borderWidth = 0;
     
     //UITextView's size changes to fit the content
     CGSize sizeThatShouldFitTheContent = [self.messageTextView  sizeThatFits:self.messageTextView.frame.size];
@@ -43,20 +49,21 @@
     if (!chatData.avatar_image) {
         NSURL *url = [NSURL URLWithString:chatData.avatar_url];
         
-        [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
+        [self downloadImageFromURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
             if (succeeded) {
-                [ChatCell makeCircularLayer:self.userIcon];
-                self.userIcon.image = image;
-                // cache tthe image
+                [ChatCell circlifyImage:self.userImage];
+                self.userImage.image = image;
+                // local storage
                 chatData.avatar_image = image;
             }
         }];
     }
     else {
-        [ChatCell makeCircularLayer:self.userIcon];
-        self.userIcon.image = chatData.avatar_image;
+        [ChatCell circlifyImage:self.userImage];
+        self.userImage.image = chatData.avatar_image;
     }
-    
+
+
 }
 
 - (void)textViewDidChange:(UITextView *)textView
@@ -68,31 +75,32 @@
     textView.frame = newFrame;
 }
 
-- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock
+
+#pragma marks - Helper methods
+- (void)downloadImageFromURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, UIImage *image))completionBlock
 {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
-    {
-        if ( !error )
-        {
-            UIImage *image = [[UIImage alloc] initWithData:data];
-            completionBlock(YES,image);
-        } else{
-            completionBlock(NO,nil);
-        }
-    }];
+     {
+         if ( !error )
+         {
+             UIImage *image = [[UIImage alloc] initWithData:data];
+             completionBlock(YES,image);
+         } else{
+             completionBlock(NO,nil);
+         }
+     }];
 }
 
-+ (void) makeCircularLayer:(UIImageView*) imageView
+
++ (void) circlifyImage:(UIImageView*) imageView
 {
     CALayer *imageLayer = imageView.layer;
     [imageLayer setCornerRadius:imageView.frame.size.width/2];
     [imageLayer setBorderWidth:0];
     [imageLayer setMasksToBounds:YES];
 }
-
-
 
 @end

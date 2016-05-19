@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainMenuViewController.h"
+#import "UIColor+HexString.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) UINavigationController *navController;
@@ -29,9 +30,24 @@
     [self.navController setNavigationBarHidden:NO];
 //        self.navController.navigationBar.tintColor = [AppDelegate myColor1 ];
     self.navController.navigationBar.backItem.title=@"";
-   
-
+//    self.navController.navigationBar.topItem.title=@"Coding Tasks";
+    [self.navController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[AppDelegate myColor_ffffff]}];
+//    [self.navController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:@"Jelloween - Machinato Light"}];
+    self.navController.navigationBar.topItem.title = @"";
+    self.navController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navController.navigationBar.backIndicatorImage = [UIImage imageNamed:@"btn_back.png"];
+    self.navController.navigationBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"btn_back.png"];
+    NSShadow* shadow = [NSShadow new];
+    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    shadow.shadowColor = [UIColor clearColor];
     
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#ffffff"],
+                                                            NSFontAttributeName: [UIFont fontWithName:@"Machinato-Light" size:20.0f],
+                                                            NSShadowAttributeName: shadow
+                                                            }];
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
         // iOS 6.1 or earlier
         self.navController.navigationBar.tintColor = [AppDelegate myColor1 ];
@@ -76,6 +92,10 @@
 
 + (UIColor*)myColor1 {
     return [UIColor colorWithRed:33.0f/255.0f green:53.0f/255.0f blue:68.0f/255.0f alpha:1.0f];
+}
+
++ (UIColor*)myColor_ffffff {
+    return [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
 }
 
 

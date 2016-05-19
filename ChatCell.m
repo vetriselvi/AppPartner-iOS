@@ -2,8 +2,8 @@
 //  TableSectionTableViewCell.m
 //  IOSProgrammerTest
 //
-//  Created by Kritsakorn on 7/24/15.
-//  Copyright (c) 2015 Kritsakorn. All rights reserved.
+//  Created by Justin LeClair on 12/15/14.
+//  Copyright (c) 2014 AppPartner. All rights reserved.
 //
 
 
@@ -12,7 +12,7 @@
 @interface ChatCell ()
 @property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, strong) IBOutlet UITextView *messageTextView;
-@property (weak, nonatomic) IBOutlet UIImageView *userIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @end
 
 @implementation ChatCell
@@ -25,14 +25,12 @@
 - (void)loadWithData:(ChatData *)chatData
 {
     self.usernameLabel.text = chatData.username;
-    [self.usernameLabel sizeToFit];
     self.messageTextView.text = chatData.message;
+    [self.usernameLabel sizeToFit];
     [self.messageTextView sizeToFit];
     
-    //UITextView's size changes to fit the content
     CGSize sizeThatShouldFitTheContent = [self.messageTextView  sizeThatFits:self.messageTextView.frame.size];
     
-    //set new height for NSLayoutAttributeHeight
     for (NSLayoutConstraint *constraint in self.messageTextView.constraints) {
         if ([constraint firstAttribute] == NSLayoutAttributeHeight) {
             [constraint setConstant:sizeThatShouldFitTheContent.height];
@@ -45,16 +43,15 @@
         
         [self downloadImageWithURL:url completionBlock:^(BOOL succeeded, UIImage *image) {
             if (succeeded) {
-                [ChatCell makeCircularLayer:self.userIcon];
-                self.userIcon.image = image;
-                // cache tthe image
+                [ChatCell makeCircularLayer:self.userImage];
+                self.userImage.image = image;
                 chatData.avatar_image = image;
             }
         }];
     }
     else {
-        [ChatCell makeCircularLayer:self.userIcon];
-        self.userIcon.image = chatData.avatar_image;
+        [ChatCell makeCircularLayer:self.userImage];
+        self.userImage.image = chatData.avatar_image;
     }
     
 }

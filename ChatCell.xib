@@ -6,10 +6,8 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Jelloween - Machinato Light.ttf">
-            <string>Machinato-Light</string>
-        </mutableArray>
         <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
             <string>Machinato</string>
         </mutableArray>
     </customFonts>
@@ -23,13 +21,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="324" height="102.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n92-Oq-3Q8">
+                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n92-Oq-3Q8">
                         <rect key="frame" x="78" y="8" width="87" height="23"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="23" id="tiN-2y-5DV"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="19"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="18"/>
+                        <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore e" translatesAutoresizingMaskIntoConstraints="NO" id="30Y-cM-wdc">
@@ -38,7 +36,8 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="yho-e6-StX"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="15"/>
+                        <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         <connections>
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="7iU-cY-ZBD"/>
@@ -46,6 +45,7 @@
                     </textView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCb-1G-qtw">
                         <rect key="frame" x="8" y="32" width="40" height="40"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="dPN-OK-5hb"/>
                             <constraint firstAttribute="height" constant="40" id="mSX-PH-n3w"/>
@@ -70,7 +70,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="messageTextView" destination="30Y-cM-wdc" id="Qjw-mg-aEn"/>
-                <outlet property="userIcon" destination="eCb-1G-qtw" id="MFe-K2-yKP"/>
+                <outlet property="userImage" destination="eCb-1G-qtw" id="MFV-ER-iGC"/>
                 <outlet property="usernameLabel" destination="n92-Oq-3Q8" id="imI-eL-nk0"/>
             </connections>
             <point key="canvasLocation" x="246" y="293.5"/>
