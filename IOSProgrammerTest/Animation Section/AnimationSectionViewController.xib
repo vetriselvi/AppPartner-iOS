@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
+                <outlet property="bg_ImageView" destination="JCR-En-1wA" id="eyZ-rL-Ayl"/>
+                <outlet property="iconImage" destination="UQB-pj-ITS" id="ncV-hL-XC0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,18 +17,50 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-IL-RFt">
-                    <rect key="frame" x="23" y="16" width="58" height="30"/>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_animation" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-En-1wA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wII-Z3-qCq">
+                    <rect key="frame" x="40" y="471" width="241" height="53"/>
+                    <state key="normal" image="btn_spin"/>
                     <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="smt-Qj-UGc"/>
+                        <action selector="spinAction:" destination="-1" eventType="touchUpInside" id="khZ-t2-f03"/>
                     </connections>
                 </button>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UQB-pj-ITS">
+                    <rect key="frame" x="96" y="220" width="128" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JCR-En-1wA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Sz-zv-rzb"/>
+                <constraint firstAttribute="trailing" secondItem="JCR-En-1wA" secondAttribute="trailing" id="68Q-i8-ShA"/>
+                <constraint firstItem="wII-Z3-qCq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="8q4-AB-OJw"/>
+                <constraint firstAttribute="bottom" secondItem="JCR-En-1wA" secondAttribute="bottom" id="EyT-Ly-H6z"/>
+                <constraint firstItem="wII-Z3-qCq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="JJT-M0-SGM"/>
+                <constraint firstAttribute="bottom" secondItem="wII-Z3-qCq" secondAttribute="bottom" constant="55" id="MjW-b7-S6b"/>
+                <constraint firstItem="JCR-En-1wA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PeK-30-PUa"/>
+                <constraint firstAttribute="trailing" secondItem="wII-Z3-qCq" secondAttribute="trailing" constant="39" id="YFj-o3-fPZ"/>
+                <constraint firstAttribute="bottom" secondItem="wII-Z3-qCq" secondAttribute="bottom" constant="44" id="Zfr-Rr-RvA"/>
+                <constraint firstAttribute="trailing" secondItem="wII-Z3-qCq" secondAttribute="trailing" constant="39" id="d5k-3w-icA"/>
+                <constraint firstAttribute="trailing" secondItem="wII-Z3-qCq" secondAttribute="trailing" constant="137" id="gX1-yV-OXT"/>
+                <constraint firstItem="wII-Z3-qCq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="137" id="rZ6-Sk-NiN"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JJT-M0-SGM"/>
+                    <exclude reference="MjW-b7-S6b"/>
+                    <exclude reference="d5k-3w-icA"/>
+                    <exclude reference="gX1-yV-OXT"/>
+                    <exclude reference="rZ6-Sk-NiN"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="bg_animation" width="320" height="568"/>
+        <image name="btn_spin" width="241" height="53"/>
+        <image name="gpc_logo_icon" width="140" height="132"/>
+    </resources>
 </document>

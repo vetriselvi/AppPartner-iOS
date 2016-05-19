@@ -27,7 +27,13 @@
     self.navigationController.navigationBar.backItem.title=@"";
     self.navigationController.navigationBar.topItem.title=@"";
 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -35,14 +41,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (IBAction)backAction:(id)sender
-//{
-//    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-//    [self.navigationController pushViewController:mainMenuViewController animated:YES];
-//}
 
 - (IBAction)loginBtn:(id)sender
 {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
     NSDictionary *parameters = @{@"username": self.username.text, @"password": self.password.text};
     NSURL *url = [NSURL URLWithString:@"http://dev.apppartner.com/AppPartnerProgrammerTest/scripts/login.php"];
     NSData *postData = [self dataFromDictionary:parameters];
@@ -110,32 +115,40 @@
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
+    [self.view endEditing:YES];
+    // Do any additional setup after loading the view.
+  
+
     [alert show];
     
     if([title isEqual:@"Success"])
     {
 
-        
+//        [self.view endEditing:YES];
         [self dismissModalViewControllerAnimated:YES];
         [(UINavigationController*)self.parentViewController popToRootViewControllerAnimated:YES];
-
-
+        [self.view endEditing:YES];
+        
     }
+    
     
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != [alertView cancelButtonIndex]) {
-        NSLog(@"Launching the store");
-        //replace appname with any specific name you want
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.com/apps/appname"]];
-    }
-}
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+// 
+//}
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField*) textField {
     [textField resignFirstResponder];
-    return NO;
+    return YES;
+}
+#pragma mark - helper methods
+-(void)dismissKeyboard {
+    [self.username resignFirstResponder];
+    [self.password resignFirstResponder];
+    
+    
 }
 
 @end
