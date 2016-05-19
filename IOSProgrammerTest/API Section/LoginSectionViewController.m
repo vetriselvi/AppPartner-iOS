@@ -42,7 +42,14 @@
 
 }
 
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -126,10 +133,13 @@
                                           otherButtonTitles:nil];
     [self.view endEditing:YES];
     // Do any additional setup after loading the view.
-  
-
     [alert show];
-    
+
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                       initWithTarget:self
+                                       action:@selector(dismissKeyboard)];
+        [self.view addGestureRecognizer:tap];
+
     if([title isEqual:@"Success"])
     {
 
@@ -139,13 +149,21 @@
         [self.view endEditing:YES];
         
     }
+  
     
     
 }
 
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-// 
-//}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+ 
+    if([[alertView buttonTitleAtIndex:0]isEqual:@"Success"])
+    {
+        //        [self.view endEditing:YES];
+        [self dismissModalViewControllerAnimated:YES];
+        [(UINavigationController*)self.parentViewController popToRootViewControllerAnimated:YES];
+        [self.view endEditing:YES];
+    }
+}
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField*) textField {

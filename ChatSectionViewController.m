@@ -111,6 +111,5 @@
                                          context:nil];
     
     return TABLE_CELL_HEIGHT+textMsgRect.size.height;
-    return TABLE_CELL_HEIGHT;
 }
 @end

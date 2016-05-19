@@ -184,9 +184,6 @@
 		4434B5A71A3FBB7100687081 = {
 			isa = PBXGroup;
 			children = (
-				D16521F71CEDBDDF00569848 /* Jelloween-Machinato-Light.ttf */,
-				D16521F81CEDBDDF00569848 /* Jelloween-Machinato.ttf */,
-				D144945C1CEBB74600C99D5A /* fonts */,
 				D144945B1CEBB72100C99D5A /* Assets */,
 				4434B5B21A3FBB7100687081 /* IOSProgrammerTest */,
 				4434B5CC1A3FBB7100687081 /* IOSProgrammerTestTests */,
@@ -250,6 +247,9 @@
 		D144945B1CEBB72100C99D5A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D16521F71CEDBDDF00569848 /* Jelloween-Machinato-Light.ttf */,
+				D16521F81CEDBDDF00569848 /* Jelloween-Machinato.ttf */,
+				D144945C1CEBB74600C99D5A /* fonts */,
 				D1E2C09C1CEE17F2004FA2C2 /* Ball_green.png */,
 				D1E2C09D1CEE17F2004FA2C2 /* Ball_green@2x.png */,
 				D1E2C09E1CEE17F2004FA2C2 /* Ball_blue.png */,
