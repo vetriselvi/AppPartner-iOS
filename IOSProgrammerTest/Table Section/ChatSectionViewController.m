@@ -23,6 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.topItem.title = @"";
+
      self.automaticallyAdjustsScrollViewInsets = NO;
     self.loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];

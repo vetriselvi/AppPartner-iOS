@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOSProgrammerTest/Table Section/ChatSectionViewController.m"
-            timestampString = "485286907.515651"
+            timestampString = "485327849.745175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-backAction:"
             landmarkType = "5">
          </BreakpointContent>

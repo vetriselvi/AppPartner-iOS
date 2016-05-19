@@ -26,7 +26,20 @@
     MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
 
     self.navController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    [self.navController setNavigationBarHidden:YES];
+    [self.navController setNavigationBarHidden:NO];
+//        self.navController.navigationBar.tintColor = [AppDelegate myColor1 ];
+    self.navController.navigationBar.backItem.title=@"";
+   
+
+    
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
+        // iOS 6.1 or earlier
+        self.navController.navigationBar.tintColor = [AppDelegate myColor1 ];
+    } else {
+        // iOS 7.0 or later
+        self.navController.navigationBar.barTintColor = [AppDelegate myColor1 ];
+        self.navController.navigationBar.translucent = NO;
+    }
     self.window.rootViewController = self.navController;
 
     return YES;
@@ -60,5 +73,10 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
++ (UIColor*)myColor1 {
+    return [UIColor colorWithRed:33.0f/255.0f green:53.0f/255.0f blue:68.0f/255.0f alpha:1.0f];
+}
+
 
 @end

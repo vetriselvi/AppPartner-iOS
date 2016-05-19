@@ -4,11 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Jelloween - Machinato Light.ttf">
-            <string>Machinato-Light</string>
-        </mutableArray>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginSectionViewController">
             <connections>
@@ -20,19 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-zC-6Xi">
-                    <rect key="frame" x="8" y="14" width="73" height="49"/>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="J25-hm-NYq"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg_login" translatesAutoresizingMaskIntoConstraints="NO" id="Zbf-9F-fyD">
                     <rect key="frame" x="0.0" y="-3" width="320" height="571"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yr3-TA-kxC">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yr3-TA-kxC">
                     <rect key="frame" x="0.0" y="156" width="320" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -49,17 +35,7 @@
                         </mask>
                     </variation>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfX-em-mYV">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
-                    <color key="backgroundColor" red="0.12941176469999999" green="0.20784313730000001" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="68" id="jZ2-EN-K0l"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="20"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-zL-kf4">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5f-zL-kf4">
                     <rect key="frame" x="0.0" y="101" width="320" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -77,6 +53,12 @@
                         </mask>
                     </variation>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYX-bT-F2X">
+                    <rect key="frame" x="139" y="25" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -87,11 +69,9 @@
                 <constraint firstItem="yr3-TA-kxC" firstAttribute="top" secondItem="z5f-zL-kf4" secondAttribute="bottom" constant="25" id="BAc-7L-w0d"/>
                 <constraint firstItem="z5f-zL-kf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EF6-4c-Cic"/>
                 <constraint firstItem="z5f-zL-kf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ga4-h9-McJ"/>
-                <constraint firstAttribute="trailing" secondItem="mfX-em-mYV" secondAttribute="trailing" id="HTQ-z1-r0S"/>
                 <constraint firstAttribute="bottom" secondItem="yr3-TA-kxC" secondAttribute="bottom" constant="447" id="Hjm-uZ-Wzo"/>
                 <constraint firstAttribute="trailing" secondItem="z5f-zL-kf4" secondAttribute="trailing" id="I6W-4b-9KW"/>
                 <constraint firstItem="z5f-zL-kf4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="Iy6-8W-0qh"/>
-                <constraint firstItem="z5f-zL-kf4" firstAttribute="top" secondItem="mfX-em-mYV" secondAttribute="bottom" constant="33" id="L1v-qi-8IN"/>
                 <constraint firstItem="yr3-TA-kxC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="N5E-QZ-fuv"/>
                 <constraint firstItem="Zbf-9F-fyD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NwQ-wA-Xwj"/>
                 <constraint firstAttribute="trailing" secondItem="yr3-TA-kxC" secondAttribute="trailing" id="PzA-Cl-7Zk"/>
@@ -102,9 +82,7 @@
                 <constraint firstItem="yr3-TA-kxC" firstAttribute="top" secondItem="z5f-zL-kf4" secondAttribute="bottom" constant="13" id="X3C-Le-cnn"/>
                 <constraint firstAttribute="trailing" secondItem="Zbf-9F-fyD" secondAttribute="trailing" id="bmj-21-igk"/>
                 <constraint firstItem="yr3-TA-kxC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dBh-yH-Jah"/>
-                <constraint firstItem="mfX-em-mYV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eKA-Km-Fsg"/>
                 <constraint firstItem="z5f-zL-kf4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h1g-mN-BtH"/>
-                <constraint firstItem="mfX-em-mYV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hT9-AP-hbr"/>
                 <constraint firstAttribute="bottom" secondItem="yr3-TA-kxC" secondAttribute="bottom" constant="447" id="kDk-2C-fPp"/>
                 <constraint firstItem="yr3-TA-kxC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kWu-y7-5o7"/>
                 <constraint firstAttribute="bottom" secondItem="yr3-TA-kxC" secondAttribute="bottom" constant="447" id="kzI-os-8Pt"/>

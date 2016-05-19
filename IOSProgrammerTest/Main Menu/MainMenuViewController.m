@@ -11,6 +11,7 @@
 #import "LoginSectionViewController.h"
 #import "AnimationSectionViewController.h"
 
+
 @interface MainMenuViewController ()
 
 @end
@@ -21,6 +22,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+     self.navigationController.navigationBar.topItem.title = @"";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
 }
 
 - (void)didReceiveMemoryWarning
