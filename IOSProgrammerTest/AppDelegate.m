@@ -91,7 +91,7 @@
 }
 
 + (UIColor*)myColor1 {
-    return [UIColor colorWithRed:33.0f/255.0f green:53.0f/255.0f blue:68.0f/255.0f alpha:1.0f];
+    return [UIColor colorWithRed:33.0f/255.0f green:53.0f/255.0f blue:68.0f/255.0f alpha:0.9f];
 }
 
 + (UIColor*)myColor_ffffff {

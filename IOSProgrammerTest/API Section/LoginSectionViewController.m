@@ -8,7 +8,8 @@
 
 #import "LoginSectionViewController.h"
 #import "MainMenuViewController.h"
-
+#import "AppDelegate.h"
+#import "UIColor+HexString.h"
 @interface LoginSectionViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -26,6 +27,13 @@
     self.title=@"Login";
     self.navigationController.navigationBar.backItem.title=@"";
     self.navigationController.navigationBar.topItem.title=@"";
+    
+    [self.username setTextColor:[UIColor colorWithHexString:@"111111"]];
+    self.username.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"username" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHexString:@"898989"]}];
+
+     [self.password setTextColor:[UIColor colorWithHexString:@"111111"]];
+    self.password.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"password" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHexString:@"898989" ]}];
+
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -61,6 +69,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self postRequest:request];
     });
+    [self.view endEditing:YES];
 }
 
 - (NSData*)dataFromDictionary:(NSDictionary*)dictionary {

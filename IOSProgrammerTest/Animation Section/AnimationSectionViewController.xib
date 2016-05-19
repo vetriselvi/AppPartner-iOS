@@ -3,11 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationSectionViewController">
             <connections>
                 <outlet property="bg_ImageView" destination="JCR-En-1wA" id="eyZ-rL-Ayl"/>
+                <outlet property="buttonImageView" destination="wII-Z3-qCq" id="1hD-Iw-BP0"/>
                 <outlet property="iconImage" destination="UQB-pj-ITS" id="ncV-hL-XC0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,8 +29,11 @@
                         <action selector="spinAction:" destination="-1" eventType="touchUpInside" id="khZ-t2-f03"/>
                     </connections>
                 </button>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UQB-pj-ITS">
-                    <rect key="frame" x="96" y="220" width="128" height="128"/>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gpc_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UQB-pj-ITS">
+                    <rect key="frame" x="96" y="202" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UQB-pj-ITS" secondAttribute="height" multiplier="1:1" id="mXs-nc-1h3"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,19 +41,29 @@
                 <constraint firstItem="JCR-En-1wA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Sz-zv-rzb"/>
                 <constraint firstAttribute="trailing" secondItem="JCR-En-1wA" secondAttribute="trailing" id="68Q-i8-ShA"/>
                 <constraint firstItem="wII-Z3-qCq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="8q4-AB-OJw"/>
+                <constraint firstItem="UQB-pj-ITS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="107" id="ArO-XF-rf9"/>
                 <constraint firstAttribute="bottom" secondItem="JCR-En-1wA" secondAttribute="bottom" id="EyT-Ly-H6z"/>
+                <constraint firstItem="UQB-pj-ITS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="220" id="HmH-Sn-RV7"/>
                 <constraint firstItem="wII-Z3-qCq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="JJT-M0-SGM"/>
                 <constraint firstAttribute="bottom" secondItem="wII-Z3-qCq" secondAttribute="bottom" constant="55" id="MjW-b7-S6b"/>
                 <constraint firstItem="JCR-En-1wA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PeK-30-PUa"/>
+                <constraint firstAttribute="trailing" secondItem="UQB-pj-ITS" secondAttribute="trailing" constant="96" id="QDn-Rj-oRb"/>
                 <constraint firstAttribute="trailing" secondItem="wII-Z3-qCq" secondAttribute="trailing" constant="39" id="YFj-o3-fPZ"/>
                 <constraint firstAttribute="bottom" secondItem="wII-Z3-qCq" secondAttribute="bottom" constant="44" id="Zfr-Rr-RvA"/>
                 <constraint firstAttribute="trailing" secondItem="wII-Z3-qCq" secondAttribute="trailing" constant="39" id="d5k-3w-icA"/>
+                <constraint firstItem="UQB-pj-ITS" firstAttribute="centerX" secondItem="JCR-En-1wA" secondAttribute="centerX" id="eqy-dF-Ps4"/>
                 <constraint firstAttribute="trailing" secondItem="wII-Z3-qCq" secondAttribute="trailing" constant="137" id="gX1-yV-OXT"/>
+                <constraint firstItem="UQB-pj-ITS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="96" id="l3a-hj-Tee"/>
+                <constraint firstAttribute="trailing" secondItem="UQB-pj-ITS" secondAttribute="trailing" constant="85" id="lfa-wp-iVo"/>
                 <constraint firstItem="wII-Z3-qCq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="137" id="rZ6-Sk-NiN"/>
+                <constraint firstItem="UQB-pj-ITS" firstAttribute="centerY" secondItem="JCR-En-1wA" secondAttribute="centerY" id="u7r-ym-OXs"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="ArO-XF-rf9"/>
+                    <exclude reference="HmH-Sn-RV7"/>
+                    <exclude reference="lfa-wp-iVo"/>
                     <exclude reference="JJT-M0-SGM"/>
                     <exclude reference="MjW-b7-S6b"/>
                     <exclude reference="d5k-3w-icA"/>

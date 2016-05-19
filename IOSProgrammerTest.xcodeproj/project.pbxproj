@@ -58,6 +58,12 @@
 		D16521F61CEDBC8700569848 /* avatar_greg_guidone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D16521D21CEDBC8700569848 /* avatar_greg_guidone.jpg */; };
 		D16521F91CEDBDDF00569848 /* Jelloween-Machinato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D16521F71CEDBDDF00569848 /* Jelloween-Machinato-Light.ttf */; };
 		D16521FA1CEDBDDF00569848 /* Jelloween-Machinato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D16521F81CEDBDDF00569848 /* Jelloween-Machinato.ttf */; };
+		D1E2C0A21CEE17F2004FA2C2 /* Ball_green.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E2C09C1CEE17F2004FA2C2 /* Ball_green.png */; };
+		D1E2C0A31CEE17F2004FA2C2 /* Ball_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E2C09D1CEE17F2004FA2C2 /* Ball_green@2x.png */; };
+		D1E2C0A41CEE17F2004FA2C2 /* Ball_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E2C09E1CEE17F2004FA2C2 /* Ball_blue.png */; };
+		D1E2C0A51CEE17F2004FA2C2 /* Ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E2C09F1CEE17F2004FA2C2 /* Ball_blue@2x.png */; };
+		D1E2C0A61CEE17F2004FA2C2 /* Ball_red.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E2C0A01CEE17F2004FA2C2 /* Ball_red.png */; };
+		D1E2C0A71CEE17F2004FA2C2 /* Ball_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1E2C0A11CEE17F2004FA2C2 /* Ball_red@2x.png */; };
 		DC932C181A40A50A000035B7 /* AnimationSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932C071A40A50A000035B7 /* AnimationSectionViewController.m */; };
 		DC932C191A40A50A000035B7 /* AnimationSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC932C081A40A50A000035B7 /* AnimationSectionViewController.xib */; };
 		DC932C1A1A40A50A000035B7 /* LoginSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932C0B1A40A50A000035B7 /* LoginSectionViewController.m */; };
@@ -139,6 +145,12 @@
 		D16521D21CEDBC8700569848 /* avatar_greg_guidone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar_greg_guidone.jpg; path = "Test Resources/assets/avatar_greg_guidone.jpg"; sourceTree = "<group>"; };
 		D16521F71CEDBDDF00569848 /* Jelloween-Machinato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jelloween-Machinato-Light.ttf"; path = "IOSProgrammerTest/Main Menu/fonts/Jelloween-Machinato-Light.ttf"; sourceTree = "<group>"; };
 		D16521F81CEDBDDF00569848 /* Jelloween-Machinato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Jelloween-Machinato.ttf"; path = "IOSProgrammerTest/Main Menu/fonts/Jelloween-Machinato.ttf"; sourceTree = "<group>"; };
+		D1E2C09C1CEE17F2004FA2C2 /* Ball_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball_green.png; path = "Test Resources/assets/Ball_green.png"; sourceTree = "<group>"; };
+		D1E2C09D1CEE17F2004FA2C2 /* Ball_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ball_green@2x.png"; path = "Test Resources/assets/Ball_green@2x.png"; sourceTree = "<group>"; };
+		D1E2C09E1CEE17F2004FA2C2 /* Ball_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball_blue.png; path = "Test Resources/assets/Ball_blue.png"; sourceTree = "<group>"; };
+		D1E2C09F1CEE17F2004FA2C2 /* Ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ball_blue@2x.png"; path = "Test Resources/assets/Ball_blue@2x.png"; sourceTree = "<group>"; };
+		D1E2C0A01CEE17F2004FA2C2 /* Ball_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball_red.png; path = "Test Resources/assets/Ball_red.png"; sourceTree = "<group>"; };
+		D1E2C0A11CEE17F2004FA2C2 /* Ball_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ball_red@2x.png"; path = "Test Resources/assets/Ball_red@2x.png"; sourceTree = "<group>"; };
 		DC932C061A40A50A000035B7 /* AnimationSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationSectionViewController.h; sourceTree = "<group>"; };
 		DC932C071A40A50A000035B7 /* AnimationSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationSectionViewController.m; sourceTree = "<group>"; };
 		DC932C081A40A50A000035B7 /* AnimationSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationSectionViewController.xib; sourceTree = "<group>"; };
@@ -238,6 +250,12 @@
 		D144945B1CEBB72100C99D5A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D1E2C09C1CEE17F2004FA2C2 /* Ball_green.png */,
+				D1E2C09D1CEE17F2004FA2C2 /* Ball_green@2x.png */,
+				D1E2C09E1CEE17F2004FA2C2 /* Ball_blue.png */,
+				D1E2C09F1CEE17F2004FA2C2 /* Ball_blue@2x.png */,
+				D1E2C0A01CEE17F2004FA2C2 /* Ball_red.png */,
+				D1E2C0A11CEE17F2004FA2C2 /* Ball_red@2x.png */,
 				D16521AF1CEDBC8700569848 /* app icons */,
 				D16521B01CEDBC8700569848 /* loading images */,
 				D16521B11CEDBC8700569848 /* btn_bg_menu_animation_test@2x.png */,
@@ -440,6 +458,7 @@
 				D16521F91CEDBDDF00569848 /* Jelloween-Machinato-Light.ttf in Resources */,
 				D16521F31CEDBC8700569848 /* avatar_justin_leclair.jpg in Resources */,
 				D16521DF1CEDBC8700569848 /* btn_bg_menu_login@3x.png in Resources */,
+				D1E2C0A31CEE17F2004FA2C2 /* Ball_green@2x.png in Resources */,
 				D16521DA1CEDBC8700569848 /* bg_login@3x.png in Resources */,
 				4434B5C41A3FBB7100687081 /* LaunchScreen.xib in Resources */,
 				DC932C191A40A50A000035B7 /* AnimationSectionViewController.xib in Resources */,
@@ -451,7 +470,9 @@
 				D16521FA1CEDBDDF00569848 /* Jelloween-Machinato.ttf in Resources */,
 				D16521EB1CEDBC8700569848 /* gpc_logo_icon@3x.png in Resources */,
 				D16521E41CEDBC8700569848 /* btn_bg_login@2x.png in Resources */,
+				D1E2C0A51CEE17F2004FA2C2 /* Ball_blue@2x.png in Resources */,
 				D16521D61CEDBC8700569848 /* bg_main_menu@3x.png in Resources */,
+				D1E2C0A71CEE17F2004FA2C2 /* Ball_red@2x.png in Resources */,
 				D16521F01CEDBC8700569848 /* gpc_logo_icon.png in Resources */,
 				D16521DD1CEDBC8700569848 /* btn_bg_menu_login.png in Resources */,
 				D16521F21CEDBC8700569848 /* bg_animation.png in Resources */,
@@ -461,6 +482,7 @@
 				D165219A1CED916A00569848 /* ChatSectionViewController.xib in Resources */,
 				D16521F41CEDBC8700569848 /* avatar_derrick_xu.jpg in Resources */,
 				D16521DB1CEDBC8700569848 /* bg_main_menu@2x.png in Resources */,
+				D1E2C0A21CEE17F2004FA2C2 /* Ball_green.png in Resources */,
 				DC932C1D1A40A50A000035B7 /* MainMenuViewController.xib in Resources */,
 				D16521E51CEDBC8700569848 /* btn_bg_login@3x.png in Resources */,
 				D16521EE1CEDBC8700569848 /* btn_bg_spin@2x.png in Resources */,
@@ -470,6 +492,7 @@
 				D16521E01CEDBC8700569848 /* bg_main_menu.png in Resources */,
 				D16521E21CEDBC8700569848 /* bg_animation@3x.png in Resources */,
 				D16521EC1CEDBC8700569848 /* bg_animation@2x.png in Resources */,
+				D1E2C0A61CEE17F2004FA2C2 /* Ball_red.png in Resources */,
 				D16521991CED916A00569848 /* ChatCell.xib in Resources */,
 				D16521E61CEDBC8700569848 /* bg_login.png in Resources */,
 				D16521D51CEDBC8700569848 /* btn_bg_menu_animation_test@2x.png in Resources */,
@@ -477,6 +500,7 @@
 				DC932C3C1A41FDC9000035B7 /* chatData.json in Resources */,
 				D16521EA1CEDBC8700569848 /* btn_bg_login.png in Resources */,
 				D16521F51CEDBC8700569848 /* avatar_drew_johnson.jpg in Resources */,
+				D1E2C0A41CEE17F2004FA2C2 /* Ball_blue.png in Resources */,
 				D16521D71CEDBC8700569848 /* btn_bg_menu_chat.png in Resources */,
 				D16521D41CEDBC8700569848 /* loading images in Resources */,
 				D16521E71CEDBC8700569848 /* btn_back.png in Resources */,
